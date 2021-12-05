@@ -10,18 +10,38 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var btnCall: UIButton!
-    let namesArray = ["Tareq", "Eman", "Noura", "Asmaa", "Mohammed", "Nada", "Abdulaziz"]
+    @IBOutlet weak var lbNumber: UILabel!
+    
+    let namesArray = ["Noura", "Asmaa", "Mohammed", "Nada", "Abdulaziz"]
+    
+    var randomNumber = Int.random(in: 1...5)
     
     @IBAction func btnCallAction(_ sender: UIButton) {
         for _ in namesArray.indices {
-            let randomName = Int.random(in: 0..<7)
-            lbName.text = namesArray[randomName]
+            randomNumber = Int.random(in: 1...5)
+            
+            lbName.text = namesArray.randomElement()
+            lbNumber.text = String(randomNumber)
+            switchColors()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+
+    func switchColors() {
+        switch randomNumber {
+        case 1...2:
+            lbNumber.textColor = UIColor.red
+        case 3...4:
+            lbNumber.textColor = UIColor.orange
+        case 5:
+            lbNumber.textColor = UIColor.green
+        default:
+            lbNumber.textColor = UIColor.black
+        }
     }
 }
 

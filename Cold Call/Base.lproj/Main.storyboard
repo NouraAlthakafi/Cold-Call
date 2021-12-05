@@ -17,12 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-oZ-0SG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="66"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Name">
+                                    <fragment content="Ready?">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="55" name=".SFNS-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="55"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -49,14 +49,24 @@
                                     <action selector="btnCallAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QPP-S5-dE3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kez-Qf-wOL">
+                                <rect key="frame" x="16" y="448" width="382" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="p8h-y9-gdd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6KM-BB-nIg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kez-Qf-wOL" secondAttribute="trailing" constant="16" id="Dp4-hx-0Lk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p8h-y9-gdd" secondAttribute="bottom" id="EBh-c0-19z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0w0-oZ-0SG" secondAttribute="trailing" id="HBz-PM-OPf"/>
+                            <constraint firstItem="kez-Qf-wOL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Itn-XW-72v"/>
                             <constraint firstItem="0w0-oZ-0SG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LvH-7B-wIv"/>
+                            <constraint firstItem="kez-Qf-wOL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZQw-Q9-1J5"/>
+                            <constraint firstItem="kez-Qf-wOL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZmV-X1-rvn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p8h-y9-gdd" secondAttribute="trailing" id="cDB-8A-AEB"/>
                             <constraint firstItem="p8h-y9-gdd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jU2-tK-FTE"/>
                             <constraint firstItem="0w0-oZ-0SG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rTG-RC-T9x"/>
@@ -66,6 +76,7 @@
                     <connections>
                         <outlet property="btnCall" destination="p8h-y9-gdd" id="UVP-8J-0nH"/>
                         <outlet property="lbName" destination="0w0-oZ-0SG" id="pCw-im-TD1"/>
+                        <outlet property="lbNumber" destination="kez-Qf-wOL" id="uds-bA-1rS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
